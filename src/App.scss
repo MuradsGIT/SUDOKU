@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.sudoku-container {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    header {
+        font-size: 40px;
+        border-bottom: 5px solid black;
+    }
+
+    .sudoku-grid {
+        margin: auto;
+        margin-top: 25px;
+        border: 2px solid black;
+        .sudoku-row {
+            // Existing styles...
+
+            &.bottom-border {
+                border-bottom: 2px solid black; // Adjust the color and thickness as needed
+            }
+        }
+
+        .sudoku-cell {
+            // Existing styles...
+            border: 1px solid grey;
+            &.right-border {
+                border-right: 2px solid black; // Adjust the color and thickness as needed
+            }
+        }
+    }
+}
+.actions {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    .solve {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .erase {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    p {
+        font-size: 50px;
+        cursor: pointer;
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input {
+    width: 45px;
+    height: 45px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    &:focus {
+        outline: none;
+        caret-color: transparent; // Hide the blinking cursor line
+
+        background-color: rgba(15, 15, 235, 0.107);
+    }
+}
+
+@media  only screen and  (max-width: 850px) {
+    .sudoku-container {
+       width: 100%;
+      }
+}
+@media  only screen and  (max-width: 500px) {
+    input {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+        text-align: center;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+            caret-color: transparent; // Hide the blinking cursor line
+    
+            background-color: rgba(15, 15, 235, 0.107);
+        }
+    }
+}
